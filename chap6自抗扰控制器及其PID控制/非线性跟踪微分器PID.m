@@ -1,27 +1,4 @@
-close all;
-clear all;
 
-h=0.001;
-y_1=0;yp_1=0;
-dy_1=0;
-
-%Plant
-a=25;b=133;
-sys=tf(b,[1,a,0]);
-dsys=c2d(sys,h,'z');
-[num,den]=tfdata(dsys,'v');
-u_1=0;u_2=0;
-p_1=0;p_2=0;
-for k=1:1:5000
-t=k*h;
-time(k)=t;
-    
-p(k)=-den(2)*p_1-den(3)*p_2+num(2)*u_1+num(3)*u_2;
-dp(k)=(p(k)-p_1)/h;
-
-yd(k)=sin(t);
-dyd(k)=cos(t);
-d(k)=0.5*sign(rands(1)); %Noise
 if mod(k,100)==1|mod(k,100)==2
     yp(k)=p(k)+d(k);     %Practical signal      
 else
