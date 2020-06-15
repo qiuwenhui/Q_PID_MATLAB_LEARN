@@ -36,7 +36,7 @@ elseif abs(x(1))>0.01
    u(k)=0.10;   
 end   
 
-if x(1)*x(2)>0|(x(2)==0)       %Rule2
+if x(1)*x(2)>0|(x(2)==0)                 %Rule2
    if abs(x(1))>=0.05
       u(k)=u_1+2*kp*x(1);
    else
@@ -48,7 +48,7 @@ if (x(1)*x(2)<0&x(2)*x2_1>0)|(x(1)==0)   %Rule3
     u(k)=u(k);
 end
 
-if x(1)*x(2)<0&x(2)*x2_1<0   %Rule4
+if x(1)*x(2)<0&x(2)*x2_1<0               %Rule4
    if abs(x(1))>=0.05
       u(k)=u_1+2*kp*error_1;
    else
