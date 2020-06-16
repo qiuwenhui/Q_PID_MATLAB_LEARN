@@ -62,7 +62,7 @@ end
    w33(k)=wkd(k)/wadd(k);
    w=[w11(k),w22(k),w33(k)];
 
-	u(k)=u_1+K*w*x;     %Control law    K神经元比例系数   W PID 值  X 为差值  
+   u(k)=u_1+K*w*x;     %Control law    K神经元比例系数   W PID 值  X 为差值  
 
 
 error_2=error_1;
